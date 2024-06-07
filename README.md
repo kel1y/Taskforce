@@ -17,7 +17,7 @@ problem: Given an array of integers and a target sum, determine if there exists 
 subarray within the array that sums up to the target. Return true if such a subarray exists,
 otherwise return false.
 
-explanations of the approach I took: by using the two pointers method.
+explanations of the approach I took: I used two pointers method.
 The idea is to maintain pointers that point to the first and last value of a subarray.
 On each turn, the left pointer moves one step to the right, and the right pointer
 moves to the right as long as the resulting subarray sum is at most x. If the sum
@@ -28,4 +28,24 @@ How run Subarray sum algorthim:
 2. create a javascript file with any "name", they normaly end with .js
 3. through the terminal of your preferred code editor navigate to the directory of your file
 4. run the command node followed by the name of your file
+
+
+
+String Transformation
+------------------------
+problem:  Given a string, transform it based on the following rules:
+● If the length of the string is divisible by 3, reverse the entire string.
+● If the length of the string is divisible by 5, replace each character with its ASCII code.
+● If the length of the string is divisible by both 3 and 5 (i.e., divisible by 15), perform
+both operations in the order specified above.
+
+explanations of the approach I took: by using if and else statements I was able to solve this problem.
+To reverse a string I loop backward through it characters while adding one character at a time to an empty string, according to the output requirements The code removes spaces from the string and then attempts to reverse it. When reversing the string, the indices used do not match up with the modified string length so I use the length of new string formed. with ASCII code, I check the equivalent ascii code for a all string characters and add it to the empty string followed by space.
+
+How run string Transformation algorthim:
+1. First install node.js
+2. create a javascript file with any "name", they normaly end with .js
+3. through the terminal of your preferred code editor navigate to the directory of your file
+4. run the command node followed by the name of your file
+
 
