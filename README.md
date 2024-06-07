@@ -1,5 +1,16 @@
 This repository contains a photo gallery application and two javascript challenge, contributions are welcomed!
 
+Photo Gallery application
+--------------------------
+To Implement an interactive photo gallery, I used provided Figma
+designs as my starting point, I started with HTML Boilerplate, then include my section tag in the body tag, with flex box I displayed my elements as columns to meet the required design. no css framework or javascript utilized.
+
+How to work run this application:
+1. Online: navigate to this website ()
+2. Locally: clone this repository, through your terminal nagivagte to the cloned directory then to Photo Gallery, open index.html, right click and select show preview, you can simply double click on index.html outside you terminal to interact with the gallery!
+
+
+
 Subarray sum
 -----------------
 problem: Given an array of integers and a target sum, determine if there exists a contiguous
