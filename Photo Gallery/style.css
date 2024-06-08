@@ -1,30 +1,113 @@
-.container {
-    display: flex;
-    gap: 5px;
-  }
+body {
+  background: #000;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  overflow-x: hidden;
+}
 
-.column {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    width: 25%;
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.photo {
+  position: relative;
+  flex-grow: 1;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  transform-origin: center;
+}
+
+.photo:hover img {
+  transform: scale(1.05);
+  filter: blur(5px) grayscale(100%);
+}
+
+h2, span {
+  margin: 0;
+}
+
+h2 {
+  color: #fff;
+  position: absolute;
+  font-size: 38px;
+  left: 10%;
+  top: 75%;
+  transition: transform 0.3s ease-in-out;
+}
+
+span.place {
+  color: #fff;
+  position: absolute;
+  left: 10%;
+  top: 93%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  transition: transform 0.3s ease-in-out;
+}
+
+span.details {
+  position: absolute;
+  top: 93%;
+  left: 10%;
+  color: #02CAC0;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.photo:hover .details {
+  opacity: 1;
+}
+
+.photo:hover h2, .photo:hover .place {
+  transform: translateY(-30px);
+}
+
+.photo:hover h2, .photo:hover .place, .photo:hover .details {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+@media (max-width: 480px) {
+  h2, span.place, .details {
+      display: none;
   }
-  .card {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 0.5;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #fff;
-    height: 100%;
+}
+
+@media (width: 540px) {
+  h2, span.place, .details {
+      display: none;
   }
-  .image {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+}
+
+@media (height: 600px) {
+  h2 {
+      font-size: 38px;
+      left: 10%;
+      top: 70%;
   }
+  
+  span.place {
+      left: 10%;
+      top: 93%;
+  }
+  
+  span.details {
+      left: 10%;
+      top: 93%;
+  }
+}
