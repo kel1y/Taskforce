@@ -20,8 +20,8 @@ otherwise return false.
 explanations of the approach I took: I used two pointers method.
 The idea is to maintain pointers that point to the first and last value of a subarray.
 On each turn, the left pointer moves one step to the right, and the right pointer
-moves to the right as long as the resulting subarray sum is at most x. If the sum
-becomes exactly x, a solution has been found
+moves to the right as long as the resulting subarray sum is at most the target. If the sum
+becomes exactly target, a solution has been found
 
 How run Subarray sum algorthim:
 1. First install node.js
